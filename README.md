@@ -4,10 +4,26 @@ A JavaFX-based application that provides users with an easy and efficient way to
 
 ## Features
 
-- **Borrow Books**: Users can borrow books from the library's collection.
-- **Return Books**: Manage borrowed books by returning them when finished.
-- **View Book Details**: Access detailed information about each book, including title, author, and description.
+- **Login**: Users can login to the app by user their name.
+  
+  ![image](https://github.com/user-attachments/assets/1483801a-1e06-46d5-bdc8-f4dcd40e9351)
+  
+- **Home Page**: Displays the most rated and recently added books, making it easy for users to choose any book they want.
+
+  ![image (1)](https://github.com/user-attachments/assets/1345a427-0c8d-4454-8054-4b1d4d9cdf95)
+  
 - **Search for Books**: Quickly find books by their names using the search functionality.
+
+   ![image (4)](https://github.com/user-attachments/assets/2a67dd96-d953-4602-82f3-791075d3d75e)
+
+- **View Book Details and borrow the book**: Access detailed information about each book, including title, author, and description.
+  
+  ![image (2)](https://github.com/user-attachments/assets/d09d77ae-df8a-429d-b731-218160075314)
+  
+- **Return Books**: Manage borrowed books by returning them when finished.
+  ![image (3)](https://github.com/user-attachments/assets/f26517ea-1134-46c8-b125-2a2fcd31ecba)
+
+
 
 ## Technology Stack
 
