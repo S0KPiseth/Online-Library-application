@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="wholeSearchBookContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="1085.0" styleClass="my-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.libraryui.bookSearchcontrol">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="NEVER">
+         <children>
+            <ImageView fx:id="coverBook" fitHeight="233.0" fitWidth="181.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Assets/bookcover.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox prefHeight="260.0" prefWidth="721.0" spacing="5.0">
+         <children>
+            <Label fx:id="titleBook" prefHeight="54.0" prefWidth="726.0" text="Gilead">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="authorBook" layoutX="10.0" layoutY="10.0" text="Robinson, Marilynne" textFill="#6e5540">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="24.0" prefWidth="886.0">
+               <children>
+                  <Label text="Published: " textFill="#848282">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="publishBook" layoutX="10.0" layoutY="10.0" text="2024" textFill="#848282">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="avialableLabel" layoutX="10.0" layoutY="68.0" text="On shelf at AUPP" textFill="#e46b2e">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="discriptionBook" alignment="TOP_LEFT" layoutX="10.0" layoutY="139.0" prefHeight="94.0" prefWidth="748.0" text="Here is an FXML file that builds an HBox resembling the layout in the uploaded image, with placeholders for elements like the image, text, and buttons." wrapText="true">
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="loanBtn" mnemonicParsing="false" prefHeight="49.0" prefWidth="123.0" style="-fx-background-color: #3a73b9;" text="Loan" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" top="10.0" />
+         </HBox.margin>
+      </Button>
+   </children>
+</HBox>

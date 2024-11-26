@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1095.2" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.libraryui.BookDetail">
+   <children>
+      <ImageView fx:id="coverPage" fitHeight="365.0" fitWidth="263.0" layoutX="63.0" layoutY="23.0" pickOnBounds="true">
+         <image>
+            <Image url="@Assets/bookcover.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="titleText" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="17.0" prefHeight="121.0" prefWidth="611.0" text="Collected Works of Carson McCullers" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Google Sans Medium" size="36.0" />
+         </font>
+      </Label>
+      <VBox layoutX="428.0" layoutY="126.0" prefHeight="372.0" prefWidth="602.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="22.0" prefWidth="184.0" text="Author                 " HBox.hgrow="NEVER">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="19.0" prefHeight="22.0" prefWidth="25.0" text=":" HBox.hgrow="NEVER">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="authorName" layoutX="194.0" layoutY="19.0" prefHeight="22.0" prefWidth="382.0" text="Author                     ">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="184.0" text="ISBN                      ">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="19.0" prefWidth="25.0" text=":">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="isbn" layoutX="194.0" layoutY="19.0" prefWidth="184.0" text="ISBN                       ">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="184.0" text="Category">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="19.0" prefWidth="25.0" text=":">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="category" layoutX="194.0" layoutY="19.0" prefWidth="184.0" text="Category">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="184.0" text="Publication Date">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="19.0" prefWidth="25.0" text=":">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="yearofBook" layoutX="194.0" layoutY="19.0" prefWidth="184.0" text="Publication Date">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="550.0">
+               <children>
+                  <Label prefWidth="184.0" text="Status">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="19.0" prefWidth="25.0" text=":">
+                     <font>
+                        <Font name="HelveticaRounded-Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bookStatus" layoutX="194.0" layoutY="19.0" prefWidth="184.0" text="Status">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loanBtn" mnemonicParsing="false" onAction="#loanBook" prefWidth="200.0" style="-fx-background-radius: 15; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #8e2de2, #4a00e0);" text="Loan" textFill="WHITE">
+                     <font>
+                        <Font name="AzonixRegular" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="description" alignment="TOP_LEFT" prefHeight="147.0" prefWidth="602.0" style="-fx-text-indent: 20px;" text="Volume Two of Stephen Donaldson's acclaimed second trilogy featuing the compelling anti-hero Thomas Covenant." wrapText="true">
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="closeDetail" layoutX="1030.0" layoutY="29.0" mnemonicParsing="false" onAction="#backDetail" prefHeight="38.0" prefWidth="38.0" style="-fx-background-radius: 30; -fx-background-color: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.2, 0, 1);">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Assets/icons8-close-500.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <VBox layoutX="5.0" layoutY="418.0" prefHeight="202.0" prefWidth="718.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="overAllRating" text="4.0">
+                     <font>
+                        <Font name="JetBrains Mono Regular" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label text="of">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="numberOfRating" layoutX="107.0" layoutY="22.0" text="100">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="150.0" layoutY="22.0" prefWidth="380.0" text="People">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="5.0">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="ratingIndicator5" prefHeight="15.0" prefWidth="226.0" progress="0.0" stylesheets="@style.css" />
+                  <Label fx:id="Rating5" prefHeight="27.0" prefWidth="380.0" text="Label">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="4.0">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="ratingIndicator4" prefHeight="15.0" prefWidth="226.0" progress="0.0" stylesheets="@style.css" />
+                  <Label fx:id="Rating4" prefWidth="380.0" text="Label">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="143.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="3.0">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="ratingIndicator3" prefHeight="15.0" prefWidth="226.0" progress="0.0" stylesheets="@style.css" />
+                  <Label fx:id="Rating3" prefWidth="380.0" text="Label">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="2.0">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="ratingIndicator2" prefHeight="15.0" prefWidth="226.0" progress="0.0" stylesheets="@style.css" />
+                  <Label fx:id="Rating2" prefWidth="380.0" text="Label">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="170.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="1.0">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="ratingIndicator1" prefHeight="15.0" prefWidth="226.0" progress="0.0" stylesheets="@style.css" />
+                  <Label fx:id="Ratting1" prefWidth="380.0" text="Label">
+                     <font>
+                        <Font name="Google Sans Regular" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

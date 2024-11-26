@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      prefWidth="1095.2" prefHeight="664"
+      style="-fx-background-color: linear-gradient(to bottom right, #f8f9fa, #e9ecef);">
+
+    <!-- Header Section with Return Button -->
+    <HBox alignment="CENTER_LEFT" spacing="20"
+          style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 0, 4, 0, 0);">
+        <padding>
+            <Insets bottom="15" left="20" right="20" top="15"/>
+        </padding>
+        <children>
+            <!-- Return Button -->
+            <Button fx:id="returnButton" styleClass="return-button"
+                    style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24">
+                        <Image url="@../images/return.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Text text="My Borrowed Books"
+                  style="-fx-font-size: 28; -fx-font-weight: bold; -fx-fill: #2c3e50;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- Search Box with Icon -->
+            <HBox alignment="CENTER_LEFT"
+                  style="-fx-background-color: #f8f9fa; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #dee2e6; -fx-border-width: 1;">
+                <padding>
+                    <Insets top="8" right="15" bottom="8" left="15"/>
+                </padding>
+                <children>
+                    <ImageView fitHeight="16" fitWidth="16">
+                        <Image url="@../images/search.png"/>
+                    </ImageView>
+                    <TextField promptText="Search books..." prefWidth="250"
+                               style="-fx-background-color: transparent; -fx-prompt-text-fill: #6c757d;"/>
+                </children>
+            </HBox>
+        </children>
+    </HBox>
+
+    <!-- Main Content -->
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
+                style="-fx-background-color: transparent; -fx-background: transparent;">
+        <content>
+            <GridPane hgap="25" vgap="25">
+                <padding>
+                    <Insets bottom="25" left="25" right="25" top="25"/>
+                </padding>
+
+                <!-- Book Card Template -->
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="0"
+                      style="-fx-background-color: white;
+                             -fx-background-radius: 15;
+                             -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 4);
+                             -fx-border-radius: 15;
+                             -fx-border-color: #e9ecef;
+                             -fx-border-width: 1;"
+                      prefWidth="240" prefHeight="320">
+                    <padding>
+                        <Insets bottom="15" left="15" right="15" top="15"/>
+                    </padding>
+                    <children>
+                        <!-- Book Cover -->
+                        <Pane prefHeight="200"
+                              style="-fx-background-color: #f8f9fa;
+                                     -fx-background-radius: 10;
+                                     -fx-border-radius: 10;
+                                     -fx-border-color: #e9ecef;
+                                     -fx-border-width: 1;"/>
+
+                        <!-- Book Details -->
+                        <VBox spacing="8" VBox.vgrow="ALWAYS">
+                            <padding>
+                                <Insets top="12"/>
+                            </padding>
+                            <children>
+                                <Text text="Book Title"
+                                      style="-fx-font-size: 16; -fx-font-weight: bold; -fx-fill: #2c3e50;"/>
+                                <Text text="Author Name"
+                                      style="-fx-font-size: 14; -fx-fill: #6c757d;"/>
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <children>
+                                        <Text text="Due in 7 days"
+                                              style="-fx-fill: #dc3545; -fx-font-size: 13;"/>
+                                        <Region HBox.hgrow="ALWAYS"/>
+                                        <HBox spacing="8">
+                                            <children>
+                                                <Button text="Return"
+                                                        style="-fx-background-color: #dc3545;
+                                                               -fx-text-fill: white;
+                                                               -fx-background-radius: 8;
+                                                               -fx-cursor: hand;
+                                                               -fx-padding: 6 12;"/>
+                                                <Button text="Renew"
+                                                        style="-fx-background-color: #0d6efd;
+                                                               -fx-text-fill: white;
+                                                               -fx-background-radius: 8;
+                                                               -fx-cursor: hand;
+                                                               -fx-padding: 6 12;"/>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+                <!-- Additional Book Cards (Copy the VBox above for each card) -->
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="0"
+                      style="-fx-background-color: white;
+                             -fx-background-radius: 15;
+                             -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 4);
+                             -fx-border-radius: 15;
+                             -fx-border-color: #e9ecef;
+                             -fx-border-width: 1;"
+                      prefWidth="240" prefHeight="320">
+                    <!-- Similar content structure as first card -->
+                </VBox>
+
+                <VBox GridPane.columnIndex="2" GridPane.rowIndex="0"
+                      style="-fx-background-color: white;
+                             -fx-background-radius: 15;
+                             -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 4);
+                             -fx-border-radius: 15;
+                             -fx-border-color: #e9ecef;
+                             -fx-border-width: 1;"
+                      prefWidth="240" prefHeight="320">
+                    <!-- Similar content structure as first card -->
+                </VBox>
+
+                <VBox GridPane.columnIndex="3" GridPane.rowIndex="0"
+                      style="-fx-background-color: white;
+                             -fx-background-radius: 15;
+                             -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 4);
+                             -fx-border-radius: 15;
+                             -fx-border-color: #e9ecef;
+                             -fx-border-width: 1;"
+                      prefWidth="240" prefHeight="320">
+                    <!-- Similar content structure as first card -->
+                </VBox>
+            </GridPane>
+        </content>
+    </ScrollPane>
+</VBox>
