@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="664" prefWidth="1095.2" style="-fx-background-color: linear-gradient(to bottom right, #f8f9fa, #e9ecef);" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Header Section with Return Button -->
+    <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 0, 4, 0, 0);">
+        <padding>
+            <Insets bottom="15" left="20" right="20" top="15" />
+        </padding>
+        <children>
+
+            <Text style="-fx-font-size: 28; -fx-font-weight: bold; -fx-fill: #2c3e50;" text="My Borrowed Books" />
+        </children>
+    </HBox>
+
+    <!-- Main Content -->
+    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" VBox.vgrow="ALWAYS">
+        <content>
+            <GridPane fx:id="gridLoan" hgap="25" vgap="25">
+                <padding>
+                    <Insets bottom="25" left="25" right="25" top="25" />
+                </padding>
+            <rowConstraints>
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </content>
+    </ScrollPane>
+</VBox>

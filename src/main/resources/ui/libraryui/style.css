@@ -1,0 +1,202 @@
+.mainFxmlClass {
+    #pane{
+        -fx-background-size: 1200 900;
+        -fx-background-radius: 20;
+        -fx-border-radius: 20;
+        -fx-border-width:5;
+    }
+}
+.flat-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #0078D4;  /* Button text color */
+    -fx-border-radius: 5px;
+}
+
+
+.rounded-textfield {
+    -fx-background-color: #ffffff; /* Background color */
+    -fx-background-radius: 15;      /* Rounded corners */
+    -fx-border-color: #8c8c8c;      /* Border color */
+    -fx-border-radius: 15;          /* Rounded border */
+    -fx-border-width: 2px;          /* Border width */
+    -fx-padding: 5px;               /* Padding inside the TextField */
+    -fx-font-size: 14px;            /* Font size */
+    -fx-background-position: left center; /* Position of the image */
+    -fx-background-size: 20px 20px; /* Set image size */
+    -fx-background-repeat: no-repeat; /* Prevent repeating the image */
+}
+.rounded-image-view {
+    -fx-background-radius: 15;      /* Set the radius of the corners */
+    -fx-border-radius: 15;          /* Ensure the border is rounded */
+    -fx-background-color: transparent;
+}
+.glass-pane {
+    -fx-background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.3), 10, 0, 0, 0);
+}
+.progress-bar > .bar {
+    -fx-background-insets: 1 1 2 1;
+    -fx-padding: 0.20em;
+}
+.my-pane {
+    -fx-background-color: #FFFFFF; /* White background */
+    -fx-border-color: #CCCCCC; /* Light gray border */
+    -fx-border-width: 1; /* Border thickness */
+    -fx-border-radius: 10; /* Rounded border corners */
+    -fx-background-radius: 10; /* Rounded background corners */
+    -fx-padding: 10; /* Padding inside the pane */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 4); /* Subtle shadow effect */
+}
+.test-pane {
+    -fx-background-image: url("Assets/bookcover.png");
+    -fx-background-size: 100% auto; /* Width 100%, height auto to maintain aspect ratio */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+/* Alternative version if you want to ensure minimum height coverage */
+.test-pane-alt {
+    -fx-background-image: url("Assets/bookcover.png");
+    -fx-background-size: 100% auto, auto 100%; /* Try both width and height fitting, use the larger */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+/* If you want to force stretch to width regardless of aspect ratio */
+.test-pane-stretch {
+    -fx-background-image: url("Assets/bookcover.png");
+    -fx-background-size: 100% 100%; /* Forces exact width and height */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+/* If you want to fit width but crop height if necessary */
+.test-pane-crop {
+    -fx-background-image: url("Assets/bookcover.png");
+    -fx-background-size: 100% auto;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top center; /* or 'bottom center' depending on where you want to crop */
+}
+.close-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-background-radius: 50%; /* Makes the button circular */
+    -fx-border-radius: 50%; /* Ensures the border is also circular */
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.close-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1); /* Adds a subtle hover effect */
+}
+/* Modern ScrollPane Styling */
+.scroll-pane {
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+/* Remove the default border of ScrollPane viewport */
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Main ScrollBar styling */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12;
+    -fx-padding: 3;
+}
+
+/* Hide horizontal ScrollBar by default */
+.scroll-pane .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
+
+/* Vertical ScrollBar styling */
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+/* The main scrolling thumb/bar */
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #cdcdcd;
+    -fx-background-radius: 6;
+    -fx-opacity: 0.6;
+    -fx-pref-width: 6;
+}
+
+/* ScrollBar track */
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* ScrollBar buttons (arrows) */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+/* Hide arrow graphics */
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-shape: " ";
+}
+
+/* Thumb hover effect */
+.scroll-bar:vertical .thumb:hover {
+    -fx-opacity: 0.8;
+}
+
+/* Thumb pressed effect */
+.scroll-bar:vertical .thumb:pressed {
+    -fx-opacity: 1;
+}
+
+/* Corner of ScrollPane (where horizontal and vertical ScrollBars meet) */
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+
+/* Hover effect to show horizontal ScrollBar when needed */
+.scroll-pane:hover .scroll-bar:horizontal {
+    -fx-opacity: 1;
+    -fx-pref-height: 12;
+}
+
+/* Optional: Add smooth transition for hover effects */
+.scroll-bar .thumb {
+    -fx-transition: opacity 0.2s ease-in-out;
+}
+
+/* Optional: Style for when ScrollPane has focus */
+.scroll-pane:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+.scence-closeBtn{
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-background-radius: 20 0 0 0;
+}
+.scence-closeBtn:hover{
+    -fx-background-color: red;
+}
+.flat-button:hover{
+    -fx-background-color: #CACACA;
+}
+
+

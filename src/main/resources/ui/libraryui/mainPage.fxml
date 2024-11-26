@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1170.0" styleClass="mainFxmlClass" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="526.0" prefWidth="75.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane maxHeight="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EEEDEB;" VBox.vgrow="NEVER">
+               <children>
+                  <Circle fill="#cf4b52" layoutX="39.0" layoutY="47.0" radius="21.0" stroke="#cf4c55" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right, rgba(31, 23, 181, 1) 15%, rgba(177, 85, 60, 1) 82%);" />
+                  <Label fx:id="userName2Digit" layoutX="27.0" layoutY="35.0" text="PS" textFill="WHITE">
+                     <font>
+                        <Font name="Nexa-Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox alignment="TOP_CENTER" prefHeight="350.0" prefWidth="75.0" spacing="30.0" style="-fx-background-color: EEEDEB;" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="libraryBtn" mnemonicParsing="false" onAction="#libraryButton" prefHeight="24.0" prefWidth="31.0" styleClass="flat-button" stylesheets="@style.css" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="lbBtnImg" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/icons8-books-500.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="checkBagBtn" layoutX="23.0" layoutY="10.0" mnemonicParsing="false" onAction="#onChekBag" prefHeight="24.0" prefWidth="31.0" styleClass="flat-button" stylesheets="@style.css" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="cBBtnImg" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/icons8-packaging-500.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="146.0" prefWidth="75.0" style="-fx-background-color: EEEDEB; -fx-background-radius: 0 0 20 20;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logOut" prefHeight="41.6" prefWidth="49.6" style="-fx-background-color: #2E073F;" styleClass="flat-button" stylesheets="@style.css">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/icons8-logout-500.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="41.6" prefWidth="49.6" style="-fx-background-color: grey;" styleClass="flat-button" stylesheets="@style.css">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/icons8-setting-384.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox fillHeight="false" minHeight="56.0" prefHeight="56.0" prefWidth="910.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane minHeight="56.0" minWidth="75.0" prefHeight="56.0" prefWidth="75.0" style="-fx-background-radius: 20 20 0 0; -fx-background-color: EEEDEB;">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="48.0" layoutX="15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/icons8-library-500.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" maxHeight="43.2" minHeight="31.0" prefHeight="40.0" prefWidth="368.0" style="-fx-background-color: #f8f9fa; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #dee2e6; -fx-border-width: 1;" HBox.hgrow="NEVER">
+               <padding>
+                  <Insets bottom="8" left="15" right="15" top="8" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="16" fitWidth="16">
+                     <image>
+                        <Image url="@Assets/icons8-search-50.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="searchbar" onKeyPressed="#onSearchEnter" prefWidth="250" promptText="Search books..." style="-fx-background-color: transparent; -fx-prompt-text-fill: #6c757d;" />
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </HBox>
+            <Button fx:id="cancelSearchbutton" maxHeight="30.0" maxWidth="30.0" mnemonicParsing="false" onAction="#exitSearch" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15;" stylesheets="@style.css" text="⛌" textAlignment="CENTER" visible="false">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <HBox alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="56.0" prefWidth="596.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="closeAllbutton" mnemonicParsing="false" onAction="#onClosing" prefHeight="56.0" prefWidth="63.0" styleClass="scence-closeBtn" stylesheets="@style.css">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/icons8-close-500.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children></HBox>
+   </top>
+   <center>
+      <StackPane fx:id="centerPane" maxHeight="664.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-radius: 0 0 20 0;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

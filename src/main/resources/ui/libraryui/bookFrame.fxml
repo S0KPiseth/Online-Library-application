@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPaneContainter" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.2" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.libraryui.ContainersControl">
+   <children>
+      <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.2" styleClass="mainFxmlClass" stylesheets="@style.css">
+         <center>
+            <ScrollPane fx:id="allContainer" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+               <content>
+                  <VBox>
+                     <children>
+                        <Label text="High rated">
+                           <font>
+                              <Font name="JetBrains Mono Regular" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="270.0" minHeight="270.0" prefHeight="270.0" prefWidth="1083.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <HBox fx:id="mostRateContainer" alignment="CENTER_LEFT" minHeight="270.0" prefHeight="290.0" prefWidth="1082.0" spacing="20.0" />
+                           </content>
+                        </ScrollPane>
+                        <Label text="Recently add">
+                           <font>
+                              <Font name="JetBrains Mono Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <GridPane fx:id="recentlyAddContainer" prefWidth="278.0" VBox.vgrow="ALWAYS">
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

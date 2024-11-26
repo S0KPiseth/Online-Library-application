@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="910.0" style="-fx-background-color: #ebe2e1;" styleClass="mainFxmlClass" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.libraryui.LoginController">
+   <children>
+      <Pane prefHeight="566.0" prefWidth="475.0" style="-fx-background-radius: 20 65 0 20; -fx-background-color: B1553C;">
+         <children>
+            <Text fill="WHITE" layoutX="29.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to our Library" wrappingWidth="388.39453125">
+               <font>
+                  <Font name="Nexa-Bold" size="80.0" />
+               </font>
+            </Text>
+            <Text fill="#d1c2c2" layoutX="117.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In every book lies a journey waiting to be discovered; every page turns into a new possibility." textAlignment="RIGHT" wrappingWidth="343.0687618255615">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="studentName" alignment="CENTER" layoutX="66.0" layoutY="428.0" onKeyPressed="#handleKeyPress" prefHeight="51.0" prefWidth="343.0" promptText="What is your name?" style="-fx-background-color: transparent; -fx-border-width: 0 0 2px 0; -fx-border-color: white; -fx-border-style: solid;">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="20.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <ImageView fx:id="loginImage" fitHeight="573.0" fitWidth="378.0" layoutX="401.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/loginCover.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="871.0" layoutY="10.0" onMouseClicked="#closeStage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/icons8-close-500.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
