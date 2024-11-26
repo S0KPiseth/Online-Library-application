@@ -42,7 +42,7 @@ public class LoginController implements Initializable {
         // Check if Enter key is pressed
         if (event.getCode().toString().equals("ENTER")) {
             String name = studentName.getText();
-            File userDir = new File("src/main/resources/Userdata");
+            File userDir = new File("src/main/resources/ui/libraryui/User data");
             for (File file : userDir.listFiles()) {
                 String fileName = file.getName();
 

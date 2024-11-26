@@ -35,8 +35,8 @@ public class User implements Serializable{
     }
 
     public void serialize(User obj) {
-        String saveUser = "src/main/resources/Userdata/" + obj.name + ".txt";
-        File directory = new File("src/main/resources/Userdata/");
+        String saveUser = "src/main/resources/ui/libraryui/User data/" + obj.name + ".txt";
+        File directory = new File("src/main/resources/ui/libraryui/User data");
         if (!directory.exists()) {
             directory.mkdirs(); // Ensure the directory exists
         }
